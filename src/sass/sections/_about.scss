@@ -1,0 +1,215 @@
+#about {
+  position: relative;
+  background-color: $primary-color;
+  background-image: linear-gradient(
+    135deg,
+    $primary-color 0%,
+    $secondary-color 100%
+  );
+  color: $white-color;
+  height: 100%;
+  border-top: 0px;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+  padding-top: 9rem;
+  padding-bottom: 12%;
+
+  // Subtle dot texture over the gradient.
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image: radial-gradient(
+      rgba(255, 255, 255, 0.16) 1px,
+      transparent 1px
+    );
+    background-size: 2.4rem 2.4rem;
+  }
+
+  > .container {
+    position: relative;
+  }
+
+  .section-kicker::before {
+    background: $white-color;
+  }
+
+  @include respond(tab-land) {
+    height: 100%;
+    padding-bottom: 8rem;
+    -webkit-clip-path: none;
+    clip-path: none;
+  }
+
+  .about-wrapper {
+    @include respond(phone) {
+      padding-bottom: 5rem;
+    }
+
+    &__image {
+      display: flex;
+      height: 100%;
+      align-items: center;
+      justify-content: center;
+
+      svg {
+        width: min(100%, 34rem);
+        height: auto;
+        background: $white-color;
+
+        @include respond(tab-port-sm) {
+          width: min(70%, 26rem);
+        }
+        border-radius: 2.4rem !important;
+        border: 0.8rem solid rgba(255, 255, 255, 0.28);
+        box-shadow: 0 30px 60px rgba(14, 60, 66, 0.28) !important;
+        transform: rotate(-2deg);
+        transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+
+        &:hover {
+          transform: rotate(0deg) scale(1.02);
+        }
+      }
+
+      @include respond(tab-land) {
+        height: 100%;
+      }
+      @include respond(tab-port-sm) {
+        padding-bottom: 6.4rem;
+      }
+    }
+
+    &__info {
+      display: flex;
+      height: 100%;
+      justify-content: center;
+      flex-direction: column;
+
+      @include respond(tab-port-sm) {
+        align-items: flex-start;
+      }
+
+      &-text {
+        text-align: left;
+        font-size: 1.7rem;
+        line-height: 1.85;
+        max-width: 56rem;
+        margin-bottom: 1.6rem;
+
+        @include respond(tab-port) {
+          text-align: left;
+        }
+        @include respond(tab-port-sm) {
+          text-align: left;
+          font-size: 1.6rem;
+        }
+
+        &--important {
+          background: darken($secondary-color, 1%);
+          display: inline-block;
+          font-style: italic;
+          padding: 0 0.3rem;
+          margin: 0.3rem 0;
+          line-height: 1.6;
+
+          @include respond(phone) {
+            display: inline;
+            margin: 0;
+            padding: 0;
+            background: transparent;
+            font-style: normal;
+          }
+        }
+      }
+    }
+  }
+
+  .about-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 0.8rem 0 2.4rem;
+    padding: 0;
+    list-style: none;
+
+    li {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.7rem;
+      padding: 0.8rem 1.4rem;
+      border-radius: 999px;
+      font-size: 1.4rem;
+      font-weight: 600;
+      background: rgba(255, 255, 255, 0.16);
+      border: 1px solid rgba(255, 255, 255, 0.32);
+      transition: background-color 0.25s ease, transform 0.25s ease;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.26);
+        transform: translateY(-2px);
+      }
+
+      i {
+        color: $sun;
+      }
+    }
+
+    @include respond(tab-port-sm) {
+      justify-content: flex-start;
+    }
+  }
+
+  // Education / experience / availability, scannable in one glance.
+  .about-facts {
+    width: 100%;
+    max-width: 56rem;
+    margin: 0 0 2.4rem;
+    text-align: left;
+    border-radius: 1.6rem;
+    background: rgba(255, 255, 255, 0.14);
+    border: 1px solid rgba(255, 255, 255, 0.28);
+
+    > div {
+      display: flex;
+      gap: 1.6rem;
+      padding: 1.4rem 1.8rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+
+      &:first-child {
+        border-top: 0;
+      }
+    }
+
+    dt {
+      flex: 0 0 auto;
+      padding-top: 0.2rem;
+      font-size: 1.3rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: $sun;
+    }
+
+    dd {
+      margin: 0;
+      font-size: 1.6rem;
+      line-height: 1.6;
+
+      strong {
+        font-weight: 800;
+      }
+
+      span {
+        display: block;
+        font-size: 1.35rem;
+        opacity: 0.85;
+      }
+    }
+  }
+
+  // Highlights sit on the teal gradient, so use a light underline.
+  mark.hl {
+    color: $white-color;
+    background: linear-gradient(transparent 62%, rgba(255, 194, 75, 0.55) 62%);
+  }
+}

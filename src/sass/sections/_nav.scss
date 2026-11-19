@@ -1,0 +1,110 @@
+// Fixed top bar that turns into frosted glass after scrolling.
+.site-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  padding: 1.6rem 0;
+  transition: padding 0.3s ease, background-color 0.3s ease,
+    box-shadow 0.3s ease;
+
+  &.is-scrolled {
+    padding: 1rem 0;
+    background: rgba(251, 250, 246, 0.82);
+    -webkit-backdrop-filter: saturate(160%) blur(14px);
+    backdrop-filter: saturate(160%) blur(14px);
+    box-shadow: 0 1px 0 rgba(27, 34, 64, 0.08);
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  &__brand {
+    font-size: 2.4rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: $ink;
+
+    &:hover {
+      color: $ink;
+    }
+  }
+
+  &__brand-dot {
+    color: $secondary-color;
+  }
+
+  &__links {
+    display: flex;
+    gap: 0.4rem;
+    margin-left: auto;
+
+    a {
+      position: relative;
+      padding: 1rem 1.4rem;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: $ink-soft;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 1.4rem;
+        right: 1.4rem;
+        bottom: 0.5rem;
+        height: 2px;
+        border-radius: 2px;
+        background: $secondary-color;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.3s ease;
+      }
+
+      &:hover {
+        color: $ink;
+
+        &::after {
+          transform: scaleX(1);
+        }
+      }
+    }
+
+    @include respond(tab-port-sm) {
+      display: none;
+    }
+  }
+
+  &__resume {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    min-height: 4.4rem;
+    padding: 0 1.8rem;
+    border-radius: 999px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $white-color;
+    background: $ink;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+
+    i {
+      font-size: 1.2rem;
+      transition: transform 0.3s ease;
+    }
+
+    &:hover {
+      color: $white-color;
+      background: darken($primary-color, 6%);
+      transform: translateY(-1px);
+
+      i {
+        transform: translateX(3px);
+      }
+    }
+  }
+}

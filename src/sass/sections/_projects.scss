@@ -1,0 +1,222 @@
+#projects {
+  background-color: $paper;
+  color: $ink;
+  margin-top: -10rem;
+  padding-top: 15rem;
+
+  @include respond(tab-land) {
+    margin-top: 0;
+    padding-top: 7rem;
+  }
+
+  .project-wrapper {
+    margin-bottom: 2rem;
+
+    @include respond(phone) {
+      margin-bottom: 0rem;
+    }
+
+    .row {
+      margin-bottom: 11rem;
+      align-items: center;
+
+      &:last-child {
+        margin-bottom: 2rem;
+      }
+
+      @include respond(phone) {
+        margin-bottom: 5.6rem;
+      }
+    }
+
+    &__text {
+      text-align: left;
+
+      @include respond(phone) {
+        margin-bottom: 2.5rem !important;
+      }
+      @include respond(tab-land) {
+        margin-bottom: 3.2rem;
+      }
+
+      &-title {
+        font-weight: 800;
+        margin-bottom: 1.4rem;
+        font-size: $mid-font-size;
+        letter-spacing: -0.01em;
+
+        @include respond(phone) {
+          font-size: 2.4rem;
+        }
+      }
+
+      & p > a {
+        color: $secondary-color;
+      }
+
+      .cta-btn {
+        margin-right: 0.8rem;
+        margin-top: 0.4rem;
+      }
+
+      // Secondary "查看源码" link: plain teal text with an underline on hover.
+      .cta-btn.text-color-main {
+        padding-left: 0.8rem;
+        padding-right: 0.8rem;
+        background-image: none;
+        color: darken($primary-color, 6%);
+        -webkit-text-fill-color: currentColor;
+
+        &::after {
+          display: none;
+        }
+
+        &:hover {
+          text-decoration: underline;
+          text-underline-offset: 0.4rem;
+        }
+      }
+
+      .cta-btn[aria-disabled="true"] {
+        opacity: 0.55;
+        cursor: default;
+      }
+    }
+
+    &__image {
+      width: 90%;
+      margin: 0 auto;
+
+      @include respond(tab-land) {
+        width: 100%;
+        margin: 0;
+      }
+
+      & .thumbnail {
+        border: none;
+        overflow: hidden;
+        border-radius: 1.8rem !important;
+        background: $white-color;
+        box-shadow: 0 24px 50px rgba(27, 34, 64, 0.1),
+          0 6px 14px rgba(27, 34, 64, 0.05);
+        transition: 0.5s transform cubic-bezier(0.155, 1.105, 0.295, 1.12),
+          0.5s box-shadow,
+          0.5s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
+
+        &:hover {
+          box-shadow: 0 32px 64px rgba(2, 170, 176, 0.18),
+            0 8px 18px rgba(27, 34, 64, 0.06);
+        }
+
+        @include respond(phone) {
+          border: 1px solid rgba(27, 34, 64, 0.08);
+          box-shadow: 0 12px 24px rgba(27, 34, 64, 0.08);
+          margin-bottom: 3.2rem;
+        }
+      }
+    }
+  }
+
+  .project-meta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: $ink-soft;
+
+    &__index {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 3.4rem;
+      height: 2.6rem;
+      border-radius: 999px;
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: $ink;
+      background: $sun;
+    }
+  }
+
+  .project-lead {
+    margin-bottom: 1.6rem;
+    font-size: 1.75rem;
+    font-weight: 700;
+    line-height: 1.6;
+    color: $ink;
+  }
+
+  .project-points {
+    margin: 0 0 2.4rem;
+
+    > div {
+      display: flex;
+      gap: 1.2rem;
+      padding: 0.9rem 0;
+      border-top: 1px dashed rgba(27, 34, 64, 0.12);
+    }
+
+    dt {
+      flex: 0 0 4.4rem;
+      height: fit-content;
+      margin-top: 0.3rem;
+      padding: 0.2rem 0;
+      border-radius: 0.6rem;
+      font-size: 1.2rem;
+      font-weight: 700;
+      text-align: center;
+      color: darken($primary-color, 8%);
+      background: $teal-soft;
+    }
+
+    dd {
+      margin: 0;
+      font-size: 1.5rem;
+      line-height: 1.75;
+      color: $ink-soft;
+
+      mark.hl {
+        color: $ink;
+      }
+
+      @include respond(phone) {
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+  // Results first: metrics sit right under the project title.
+  .project-metrics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin: 0 0 1.8rem;
+    padding: 0;
+    list-style: none;
+
+    li {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+      padding: 1rem 1.4rem;
+      border-radius: 1.2rem;
+      font-size: 1.2rem;
+      color: $ink-soft;
+      background: $white-color;
+      border: 1px solid rgba(27, 34, 64, 0.08);
+      border-top: 3px solid $secondary-color;
+      box-shadow: 0 4px 10px rgba(27, 34, 64, 0.04);
+    }
+
+    strong {
+      font-size: 1.9rem;
+      font-weight: 800;
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+      color: $ink;
+      white-space: nowrap;
+    }
+  }
+}

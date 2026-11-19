@@ -1,0 +1,1118 @@
+<!--
+  Hello!
+  -
+  Simplefolio is a clean and responsive portfolio template for Developers!
+  Created by Jacobo Martinez.
+  -
+  Github Repo: https://github.com/cobiwave/simplefolio/
+  Readme: https://github.com/cobiwave/simplefolio/README.md
+  -
+-->
+<!DOCTYPE html>
+<html lang="zh-CN" class="sr">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" type="image/png" href="assets/favicon.png" />
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+    <meta name="theme-color" content="#1b2240" />
+
+    <title>Zora | AI 产品经理实习作品集</title>
+    <meta
+      name="keywords"
+      content="Zora, AI 产品经理实习, 大模型应用, Agent, 作品集"
+    />
+    <meta
+      name="description"
+      content="Zora 的 AI 产品作品集：用用户访谈定义问题，用规则与模型分工建立可信体验，用评测和真实反馈持续迭代。电子信息硕士在读，寻求大模型应用与 Agent 产品实习。"
+    />
+    <!-- Share card for WeChat and other link previews. Absolute URLs are required. -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Zora" />
+    <meta property="og:title" content="Zora | AI 产品经理实习作品集" />
+    <meta
+      property="og:description"
+      content="把问题拆透，用 AI 把好产品做出来。2,300+ 用户的小程序、97.5% 评测准确率的问数 Agent。"
+    />
+    <meta
+      property="og:url"
+      content="https://jiajia0820.github.io/zora-portfolio/"
+    />
+    <meta
+      property="og:image"
+      content="https://jiajia0820.github.io/zora-portfolio/og-card.jpg"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="stylesheet" href="styles.scss" />
+    <noscript>
+      <style>
+        .load-hidden {
+          visibility: visible !important;
+        }
+      </style>
+    </noscript>
+  </head>
+
+  <body>
+    <div id="top"></div>
+
+    <!-- **** Site Nav **** -->
+    <header class="site-nav" data-site-nav>
+      <div class="container site-nav__inner">
+        <a class="site-nav__brand" href="#top" aria-label="Zora，回到顶部"
+          >Zora<span class="site-nav__brand-dot" aria-hidden="true">.</span></a
+        >
+        <nav class="site-nav__links" aria-label="页面导航">
+          <a href="#about" data-nav-link>关于</a>
+          <a href="#projects" data-nav-link>项目</a>
+          <a href="#ui-works" data-nav-link>作品</a>
+          <a href="#contact" data-nav-link>联系</a>
+        </nav>
+        <a
+          class="site-nav__resume"
+          href="assets/resume-aipm.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="在新标签页查看 Zora 的 AI 产品经理简历（PDF）"
+          >简历 <i class="fa fa-arrow-right" aria-hidden="true"></i
+        ></a>
+      </div>
+    </header>
+    <!-- /END Site Nav -->
+
+    <!-- **** Hero Section **** -->
+    <section id="hero" class="jumbotron">
+      <div class="hero-bg" aria-hidden="true">
+        <span class="hero-bg__grid"></span>
+        <span class="hero-bg__blob hero-bg__blob--teal"></span>
+        <span class="hero-bg__blob hero-bg__blob--sun"></span>
+      </div>
+      <div class="container">
+        <div class="row align-items-center hero-layout">
+          <div class="col-lg-7 col-sm-12">
+            <h1 class="hero-title load-hidden">
+              <span class="hero-title__hello"
+                >Hi，我是 <span class="text-color-main">Zora</span></span
+              >
+              <span class="hero-title__slogan"
+                >把问题拆透，<br /><span class="hero-title__line"
+                  >用 <span class="hero-title__ai">AI</span> 把<span
+                    class="hero-title__marker"
+                    >好产品</span
+                  >做出来。</span
+                ></span
+              >
+            </h1>
+            <ul class="hero-facts load-hidden" aria-label="教育与实习背景">
+              <li>
+                <i class="fa fa-graduation-cap" aria-hidden="true"></i
+                >南京邮电大学 · 电子信息硕士 · 2028 届
+              </li>
+              <li>
+                <i class="fa fa-briefcase" aria-hidden="true"></i
+                ><strong>荣耀</strong> 解决方案实习
+              </li>
+            </ul>
+            <ul class="hero-traits load-hidden" aria-label="个人关键词">
+              <li>好奇心</li>
+              <li>坚韧</li>
+              <li>擅长拆解问题</li>
+              <li>《半拿铁》忠实听众</li>
+            </ul>
+            <p class="hero-cta load-hidden">
+              <a class="cta-btn cta-btn--primary" href="#projects"
+                >看我的产品 <i class="fa fa-arrow-down" aria-hidden="true"></i
+              ></a>
+              <a
+                class="cta-btn cta-btn--ghost"
+                href="assets/resume-aipm.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="在新标签页查看 Zora 的 AI 产品经理简历（PDF）"
+                >查看简历</a
+              >
+            </p>
+          </div>
+
+          <div class="col-lg-5 col-sm-12">
+            <div class="hero-visual load-hidden">
+              <div class="think-card" data-think-card>
+                <div class="think-card__bar">
+                  <span class="think-card__dots" aria-hidden="true"
+                    ><i></i><i></i><i></i
+                  ></span>
+                  <span class="think-card__file">product-thinking.md</span>
+                  <span class="think-card__chip">AI × PM</span>
+                </div>
+                <div
+                  class="think-card__tabs"
+                  role="tablist"
+                  aria-label="产品思考案例"
+                >
+                  <button
+                    type="button"
+                    role="tab"
+                    id="think-tab-1"
+                    aria-controls="think-panel-1"
+                    aria-selected="true"
+                    data-think-tab
+                  >
+                    智家清单
+                  </button>
+                  <button
+                    type="button"
+                    role="tab"
+                    id="think-tab-2"
+                    aria-controls="think-panel-2"
+                    aria-selected="false"
+                    tabindex="-1"
+                    data-think-tab
+                  >
+                    问数 Agent
+                  </button>
+                </div>
+                <ol
+                  class="think-card__panel"
+                  id="think-panel-1"
+                  role="tabpanel"
+                  aria-labelledby="think-tab-1"
+                  data-think-panel
+                >
+                  <li class="think-line think-line--q" style="--i: 0">
+                    <span class="think-line__tag">Q</span>
+                    <span class="think-line__text"
+                      >装修新手怎么买智能家居，又不超预算？</span
+                    >
+                  </li>
+                  <li class="think-line" style="--i: 1">
+                    <span class="think-line__tag">洞察</span>
+                    <span class="think-line__text"
+                      >访谈 12 位用户：直接推荐易超预算、难兼容已有设备</span
+                    >
+                  </li>
+                  <li class="think-line" style="--i: 2">
+                    <span class="think-line__tag">取舍</span>
+                    <span class="think-line__text">规则定推荐，AI 做解释</span>
+                  </li>
+                  <li class="think-line" style="--i: 3">
+                    <span class="think-line__tag">兜底</span>
+                    <span class="think-line__text">模型异常时回退规则方案</span>
+                  </li>
+                  <li class="think-line think-line--result" style="--i: 4">
+                    <span class="think-line__tag">结果</span>
+                    <span class="think-line__text"
+                      >上线 6 周，累计用户 <strong>2,300+</strong></span
+                    >
+                  </li>
+                </ol>
+                <ol
+                  class="think-card__panel"
+                  id="think-panel-2"
+                  role="tabpanel"
+                  aria-labelledby="think-tab-2"
+                  data-think-panel
+                  hidden
+                >
+                  <li class="think-line think-line--q" style="--i: 0">
+                    <span class="think-line__tag">Q</span>
+                    <span class="think-line__text"
+                      >AI 答出的经营数字，业务敢直接用吗？</span
+                    >
+                  </li>
+                  <li class="think-line" style="--i: 1">
+                    <span class="think-line__tag">洞察</span>
+                    <span class="think-line__text"
+                      >访谈 5 位财务分析用户：每个数字都要能回查来源</span
+                    >
+                  </li>
+                  <li class="think-line" style="--i: 2">
+                    <span class="think-line__tag">取舍</span>
+                    <span class="think-line__text"
+                      >对比 RAG 与 NL2SQL，选混合方案并先澄清口径</span
+                    >
+                  </li>
+                  <li class="think-line" style="--i: 3">
+                    <span class="think-line__tag">迭代</span>
+                    <span class="think-line__text">按 5 类 Badcase 复盘</span>
+                  </li>
+                  <li class="think-line think-line--result" style="--i: 4">
+                    <span class="think-line__tag">结果</span>
+                    <span class="think-line__text"
+                      >自建评测准确率 82.4% → <strong>97.5%</strong></span
+                    >
+                  </li>
+                </ol>
+                <div class="think-card__progress" aria-hidden="true">
+                  <span data-think-progress></span>
+                </div>
+              </div>
+              <p class="hero-visual__sticker" aria-hidden="true">
+                <i class="fa fa-lightbulb-o"></i> 每次迭代都有依据
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <ul class="hero-stats load-hidden" aria-label="项目成果数据">
+          <li class="hero-stat">
+            <span class="hero-stat__value"
+              ><span data-count-to="2300">2,300</span
+              ><span class="hero-stat__unit">+</span></span
+            >
+            <span class="hero-stat__label">智家清单上线 6 周累计用户</span>
+          </li>
+          <li class="hero-stat">
+            <span class="hero-stat__value"
+              ><span
+                data-count-from="82.4"
+                data-count-to="97.5"
+                data-decimals="1"
+                >97.5</span
+              ><span class="hero-stat__unit">%</span></span
+            >
+            <span class="hero-stat__label">问数 Agent 自建评测准确率</span>
+          </li>
+          <li class="hero-stat">
+            <span class="hero-stat__value"
+              ><span class="hero-stat__from">7 →</span>
+              <span data-count-from="7" data-count-to="2.1" data-decimals="1"
+                >2.1</span
+              ><span class="hero-stat__unit">分钟</span></span
+            >
+            <span class="hero-stat__label">病区巡检试点告警平均响应</span>
+          </li>
+          <li class="hero-stat">
+            <span class="hero-stat__value"
+              ><span>1</span><span class="hero-stat__unit">个月</span></span
+            >
+            <span class="hero-stat__label">智家清单从需求到上线</span>
+          </li>
+        </ul>
+
+        <p class="hero-motto load-hidden" lang="en">
+          You can be anyone you want to be.
+        </p>
+      </div>
+    </section>
+    <!-- /END Hero Section -->
+
+    <!-- **** About Section **** -->
+    <section id="about">
+      <div class="container">
+        <h2 class="section-title load-hidden">
+          <span class="section-kicker">About</span>关于 Zora
+        </h2>
+        <div class="row about-wrapper">
+          <div class="col-md-6 col-sm-12">
+            <div class="about-wrapper__image load-hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="img-fluid rounded shadow-lg"
+                width="300"
+                height="400"
+                viewBox="0 0 900 1200"
+                role="img"
+                aria-label="Zora 的插画头像：棕色卷发、白色外套与红色上衣"
+              >
+                <image
+                  href="assets/media/portrait-zora.jpg"
+                  width="900"
+                  height="1200"
+                  aria-hidden="true"
+                />
+              </svg>
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-12">
+            <div class="about-wrapper__info load-hidden">
+              <dl class="about-facts">
+                <div>
+                  <dt>教育</dt>
+                  <dd>
+                    <strong>南京邮电大学 · 电子信息硕士</strong>
+                    <span>边缘智能与多智能体决策 · 2028 年 6 月毕业</span>
+                  </dd>
+                </div>
+                <div>
+                  <dt>经历</dt>
+                  <dd><strong>荣耀</strong> 解决方案实习（6G 标准预研）</dd>
+                </div>
+              </dl>
+              <p class="about-wrapper__info-text">
+                好奇心是我的起点。我是《半拿铁》的忠实听众，喜欢听一家公司怎样起势、怎样掉队；遇到好用的产品，会琢磨它为什么让人愿意留下来。轮到自己做，我先走近用户把问题拆透，再亲手写
+                PRD、做原型，日常和 Codex、Claude、Cursor
+                协作，用代码快速验证想法。
+              </p>
+              <p class="about-wrapper__info-text">
+                做 AI 产品时，我习惯追问三件事：<mark class="hl"
+                  >模型该负责什么？出错时如何兜底？效果怎样衡量？</mark
+                >从规则与模型分工，到评测集与 Badcase
+                复盘，我边做边学，坚持把每次迭代做出依据。
+              </p>
+              <ul class="about-tags" aria-label="关于我的关键词">
+                <li><i class="fa fa-search" aria-hidden="true"></i>好奇心</li>
+                <li><i class="fa fa-repeat" aria-hidden="true"></i>坚韧</li>
+                <li>
+                  <i class="fa fa-sitemap" aria-hidden="true"></i>拆解问题
+                </li>
+                <li>
+                  <i class="fa fa-headphones" aria-hidden="true"></i>半拿铁
+                </li>
+                <li><i class="fa fa-heart" aria-hidden="true"></i>好产品控</li>
+                <li>
+                  <i class="fa fa-terminal" aria-hidden="true"></i>Codex /
+                  Claude / Cursor
+                </li>
+              </ul>
+              <span class="d-flex mt-3">
+                <a
+                  class="cta-btn cta-btn--resume"
+                  href="assets/resume-aipm.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="在新标签页查看 Zora 的 AI 产品经理简历（PDF）"
+                  >查看简历</a
+                >
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /END About Section -->
+
+    <!-- **** Projects Section **** -->
+    <section id="projects">
+      <div class="container">
+        <div class="project-wrapper">
+          <h2 class="section-title dark-blue-text">
+            <span class="section-kicker">Work</span>我的产品实践
+          </h2>
+          <p class="section-intro">
+            每个项目都从一个真实问题出发：先拆清用户与场景，再决定 AI
+            负责什么，最后用数据验证。
+          </p>
+
+          <!-- Unavailable project links stay unset until real assets are supplied. -->
+          <!-- Notice: each .row is a project -->
+          <div class="row">
+            <div class="col-lg-4 col-sm-12">
+              <div class="project-wrapper__text load-hidden">
+                <p class="project-meta">
+                  <span class="project-meta__index">01</span>已上线微信小程序 ·
+                  3 人团队发起人、产品与 AI 应用负责人
+                </p>
+                <h3 class="project-wrapper__text-title">智家清单</h3>
+                <ul class="project-metrics" aria-label="智家清单关键数据">
+                  <li><strong>2,300+</strong>上线 6 周累计用户</li>
+                  <li><strong>68%</strong>测评完成率</li>
+                  <li><strong>21%</strong>方案收藏率</li>
+                </ul>
+                <div class="project-body">
+                  <p class="project-lead">
+                    为首次装修的用户做智能家居选购，让推荐既懂需求，也守住预算。
+                  </p>
+                  <dl class="project-points">
+                    <div>
+                      <dt>洞察</dt>
+                      <dd>
+                        访谈 12
+                        位首次装修用户，发现模型直接推荐容易超预算，也难兼容已有设备。
+                      </dd>
+                    </div>
+                    <div>
+                      <dt>取舍</dt>
+                      <dd>
+                        确立“<mark class="hl">规则定推荐，AI 做解释</mark
+                        >”：选购经验拆成 6 题测评、8 类场景包与 3
+                        档方案；模型或云端异常时回退规则方案，主流程不中断。
+                      </dd>
+                    </div>
+                    <div>
+                      <dt>结果</dt>
+                      <dd>
+                        1 个月完成需求到上线，上线 6 周累计用户
+                        <mark class="hl">2,300+</mark>。入围 Trae AI
+                        创造力大赛年度 350 强（约 1.4 万份作品，前 2.5%）。
+                      </dd>
+                    </div>
+                  </dl>
+                </div>
+                <a
+                  class="cta-btn cta-btn--hero"
+                  href="assets/media/zhijia-demo.mp4"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >观看演示</a
+                >
+                <a
+                  class="cta-btn text-color-main"
+                  href="https://github.com/jiajia0820/zhijia-list"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >查看源码</a
+                >
+              </div>
+            </div>
+            <div class="col-lg-8 col-sm-12">
+              <div class="project-wrapper__image load-hidden">
+                <a
+                  href="assets/media/zhijia-demo.mp4"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="播放智家清单演示视频"
+                >
+                  <div
+                    data-tilt
+                    data-tilt-max="4"
+                    data-tilt-glare="true"
+                    data-tilt-max-glare="0.5"
+                    class="thumbnail rounded js-tilt"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="img-fluid"
+                      width="1600"
+                      height="900"
+                      viewBox="0 0 1600 900"
+                      role="img"
+                      aria-label="智家清单实机截图：首页、需求测评与方案预算"
+                    >
+                      <rect width="1600" height="900" fill="#fff" />
+                      <image
+                        href="assets/media/zhijia-home.jpg"
+                        x="140"
+                        y="10"
+                        width="400"
+                        height="880"
+                        preserveAspectRatio="xMidYMid meet"
+                        aria-hidden="true"
+                      />
+                      <image
+                        href="assets/media/zhijia-assessment.jpg"
+                        x="600"
+                        y="10"
+                        width="400"
+                        height="880"
+                        preserveAspectRatio="xMidYMid meet"
+                        aria-hidden="true"
+                      />
+                      <image
+                        href="assets/media/zhijia-plan.jpg"
+                        x="1060"
+                        y="10"
+                        width="400"
+                        height="880"
+                        preserveAspectRatio="xMidYMid meet"
+                        aria-hidden="true"
+                      />
+                    </svg>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- /END Project -->
+
+          <!-- Notice: each .row is a project -->
+          <div class="row">
+            <div class="col-lg-4 col-sm-12">
+              <div class="project-wrapper__text load-hidden">
+                <p class="project-meta">
+                  <span class="project-meta__index">02</span>产品实习 ·
+                  边缘智能研究院（驻场江苏省人民医院）
+                </p>
+                <h3 class="project-wrapper__text-title">智慧病区巡检</h3>
+                <ul class="project-metrics" aria-label="智慧病区巡检关键数据">
+                  <li><strong>7→2.1 分钟</strong>告警平均响应</li>
+                  <li><strong>20+→3</strong>诉求收敛为核心告警</li>
+                  <li><strong>2 个</strong>病区常态化运行</li>
+                </ul>
+                <div class="project-body">
+                  <p class="project-lead">病区里的需求很多，先解决哪几个？</p>
+                  <dl class="project-points">
+                    <div>
+                      <dt>洞察</dt>
+                      <dd>
+                        作为驻场产品实习生，跟岗访谈 6 个病区的 30+ 名医护，将
+                        <mark class="hl">20+ 项诉求收敛为 3 类核心告警</mark
+                        >：跌倒、异常滞留、通道阻塞。
+                      </dd>
+                    </div>
+                    <div>
+                      <dt>推进</dt>
+                      <dd>
+                        负责 PRD
+                        与原型，协同算法、硬件团队推进云边端方案及验收。
+                      </dd>
+                    </div>
+                    <div>
+                      <dt>结果</dt>
+                      <dd>
+                        5 台机器人试点 4 周，告警平均响应由
+                        <mark class="hl">7 分钟降至 2.1 分钟</mark>，后续在 2
+                        个病区常态化运行。
+                      </dd>
+                    </div>
+                  </dl>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-8 col-sm-12">
+              <div class="project-wrapper__image load-hidden">
+                <a
+                  aria-disabled="true"
+                  tabindex="-1"
+                  title="智慧病区巡检机器人实物照片"
+                >
+                  <div
+                    data-tilt
+                    data-tilt-max="4"
+                    data-tilt-glare="true"
+                    data-tilt-max-glare="0.5"
+                    class="thumbnail rounded js-tilt"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="img-fluid"
+                      width="1600"
+                      height="900"
+                      viewBox="0 0 1600 900"
+                      role="img"
+                      aria-label="智慧病区巡检的两台机器人实物照片"
+                    >
+                      <rect width="1600" height="900" fill="#fff" />
+                      <image
+                        href="assets/media/ward-robots.jpg"
+                        width="1600"
+                        height="900"
+                        preserveAspectRatio="xMidYMid meet"
+                        aria-hidden="true"
+                      />
+                    </svg>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- /END Project -->
+
+          <!-- Notice: each .row is a project -->
+          <div class="row">
+            <div class="col-lg-4 col-sm-12">
+              <div class="project-wrapper__text load-hidden">
+                <p class="project-meta">
+                  <span class="project-meta__index">03</span>中国电子杯赛题 Demo
+                  · 产品负责人，主导完成产品设计与开发
+                </p>
+                <h3 class="project-wrapper__text-title">经营分析问数 Agent</h3>
+                <ul class="project-metrics" aria-label="问数 Agent 关键数据">
+                  <li><strong>82.4%→97.5%</strong>自建评测准确率</li>
+                  <li><strong>119</strong>个评分单元</li>
+                  <li><strong>6 秒内</strong>单轮平均响应</li>
+                </ul>
+                <div class="project-body">
+                  <p class="project-lead">
+                    业务问数的难点，在于数字答出来后能否被信任。
+                  </p>
+                  <dl class="project-points">
+                    <div>
+                      <dt>洞察</dt>
+                      <dd>
+                        经营数据散落在 11 张业务表与 12 份文档，口径不一。访谈 5
+                        位财务分析用户后，把目标定为“<mark class="hl"
+                          >每个数字都能回查来源</mark
+                        >”。
+                      </dd>
+                    </div>
+                    <div>
+                      <dt>取舍</dt>
+                      <dd>
+                        对比 RAG、NL2SQL 与混合方案，用 LangGraph 编排 SQL
+                        与文档检索；先澄清口径，再逐项绑定结果、原文和公式。
+                      </dd>
+                    </div>
+                    <div>
+                      <dt>结果</dt>
+                      <dd>
+                        按 5 类 Badcase 复盘迭代，在自建的 119
+                        个评分单元评测集（含多轮会话）上，准确率由
+                        <mark class="hl">82.4% 提升至 97.5%</mark
+                        >，单轮平均响应控制在 6 秒内。
+                      </dd>
+                    </div>
+                  </dl>
+                </div>
+                <a
+                  class="cta-btn cta-btn--hero"
+                  href="assets/media/business-agent-demo.mp4"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >观看演示</a
+                >
+                <a
+                  class="cta-btn text-color-main"
+                  href="https://github.com/jiajia0820/chinook-business-agent"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >查看源码</a
+                >
+              </div>
+            </div>
+            <div class="col-lg-8 col-sm-12">
+              <div class="project-wrapper__image load-hidden">
+                <a
+                  href="assets/media/business-agent-demo.mp4"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="播放经营分析问数 Agent 演示视频"
+                >
+                  <div
+                    data-tilt
+                    data-tilt-max="4"
+                    data-tilt-glare="true"
+                    data-tilt-max-glare="0.5"
+                    class="thumbnail rounded js-tilt"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="img-fluid"
+                      width="1600"
+                      height="900"
+                      viewBox="0 0 1600 900"
+                      role="img"
+                      aria-label="经营分析问数 Agent 的问答与证据溯源截图"
+                    >
+                      <rect width="1600" height="900" fill="#fff" />
+                      <image
+                        href="assets/media/business-agent.png"
+                        width="1600"
+                        height="900"
+                        preserveAspectRatio="xMidYMid meet"
+                        aria-hidden="true"
+                      />
+                    </svg>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- /END Project -->
+
+          <!-- Notice: each .row is a project -->
+          <div class="row">
+            <div class="col-lg-4 col-sm-12">
+              <div class="project-wrapper__text load-hidden">
+                <p class="project-meta">
+                  <span class="project-meta__index">04</span>个人项目 ·
+                  基于开源项目二次迭代
+                </p>
+                <h3 class="project-wrapper__text-title">声笺</h3>
+                <ul class="project-metrics" aria-label="声笺使用数据">
+                  <li><strong>90+ 期</strong>播客已整理</li>
+                  <li><strong>35+</strong>位朋友在用</li>
+                </ul>
+                <div class="project-body">
+                  <p class="project-lead">
+                    听过的好内容，怎样才能留下来、用起来？
+                  </p>
+                  <dl class="project-points">
+                    <div>
+                      <dt>定位</dt>
+                      <dd>
+                        我基于开源项目持续迭代声笺，将小宇宙官方文稿整理成
+                        Markdown 私有知识库，已整理 90+ 期播客，并推荐给 35+
+                        位身边朋友使用。
+                      </dd>
+                    </div>
+                    <div>
+                      <dt>取舍</dt>
+                      <dd>
+                        长内容要读得轻松，也要问得有据。补齐自定义 AI
+                        提供商双协议接入、保留原意的 AI 降噪整理与本地声纹分段。
+                      </dd>
+                    </div>
+                    <div>
+                      <dt>体验</dt>
+                      <dd>
+                        划词追问关联原文时间戳，长文整理保留证据，让用户能<mark
+                          class="hl"
+                          >从总结回到原文</mark
+                        >，继续自己的思考。
+                      </dd>
+                    </div>
+                  </dl>
+                </div>
+                <a
+                  class="cta-btn text-color-main"
+                  href="https://github.com/jiajia0820/shengjian-xiaoyuzhou"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >查看源码</a
+                >
+              </div>
+            </div>
+            <div class="col-lg-8 col-sm-12">
+              <div class="project-wrapper__image load-hidden">
+                <a
+                  href="https://github.com/jiajia0820/shengjian-xiaoyuzhou"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="查看声笺 GitHub 仓库"
+                >
+                  <div
+                    data-tilt
+                    data-tilt-max="4"
+                    data-tilt-glare="true"
+                    data-tilt-max-glare="0.5"
+                    class="thumbnail rounded js-tilt"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="img-fluid"
+                      width="1600"
+                      height="900"
+                      viewBox="0 0 1600 900"
+                      role="img"
+                      aria-label="声笺小宇宙文稿库视觉展示图"
+                    >
+                      <rect width="1600" height="900" fill="#f4f0e5" />
+                      <image
+                        href="assets/media/shengjian-cover.jpg"
+                        width="1600"
+                        height="900"
+                        preserveAspectRatio="xMidYMid meet"
+                        aria-hidden="true"
+                      />
+                    </svg>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- /END Project -->
+        </div>
+      </div>
+    </section>
+    <!-- /END Projects Section -->
+
+    <!-- **** UI Works Section **** -->
+    <section id="ui-works" aria-labelledby="ui-works-title">
+      <div class="container">
+        <div class="ui-works__header load-hidden">
+          <div class="ui-works__intro">
+            <h2
+              id="ui-works-title"
+              class="section-title dark-blue-text ui-works__title"
+            >
+              <span class="section-kicker">Visual</span>视觉表达
+            </h2>
+            <p class="ui-works__subtitle">
+              产品画册、品牌符号与海报：好产品也需要好表达，我在这里练审美与信息层级。
+            </p>
+          </div>
+          <div class="ui-works__controls">
+            <span
+              class="ui-works__status"
+              data-gallery-status
+              aria-live="polite"
+              >01 / 06</span
+            >
+            <button
+              type="button"
+              class="ui-works__nav-btn"
+              data-gallery-prev
+              aria-label="向左滑动查看上一组作品"
+            >
+              <i class="fa fa-angle-left" aria-hidden="true"></i>
+            </button>
+            <button
+              type="button"
+              class="ui-works__nav-btn"
+              data-gallery-next
+              aria-label="向右滑动查看下一组作品"
+            >
+              <i class="fa fa-angle-right" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="ui-works__rail load-hidden">
+        <div
+          class="ui-works__track"
+          data-gallery-track
+          tabindex="0"
+          role="region"
+          aria-label="视觉与设计作品横向滑动展示栏"
+        >
+          <article class="ui-card" data-tag="产品视觉">
+            <div class="ui-card__media">
+              <img
+                class="ui-card__img"
+                src="assets/media/ui-smartcook-brochure.jpg"
+                width="1800"
+                height="1337"
+                loading="lazy"
+                decoding="async"
+                alt="掌勺 AI 食材识别与营养社区产品功能画册"
+              />
+            </div>
+            <div class="ui-card__caption">
+              <span class="ui-card__title">掌勺产品画册</span>
+              <i class="fa fa-search-plus ui-card__zoom" aria-hidden="true"></i>
+            </div>
+          </article>
+
+          <article class="ui-card" data-tag="空间导视">
+            <div class="ui-card__media">
+              <img
+                class="ui-card__img"
+                src="assets/media/ui-deji-facade.jpg"
+                width="1466"
+                height="1564"
+                loading="lazy"
+                decoding="async"
+                alt="德基艺术博物馆建筑外立面玻璃幕墙视觉呈现"
+              />
+            </div>
+            <div class="ui-card__caption">
+              <span class="ui-card__title">德基幕墙视觉</span>
+              <i class="fa fa-search-plus ui-card__zoom" aria-hidden="true"></i>
+            </div>
+          </article>
+
+          <article class="ui-card" data-tag="PS 合成">
+            <div class="ui-card__media">
+              <img
+                class="ui-card__img"
+                src="assets/media/ui-space-poster.jpg"
+                width="1351"
+                height="1800"
+                loading="lazy"
+                decoding="async"
+                alt="太空探索主题 PS 合成海报"
+              />
+            </div>
+            <div class="ui-card__caption">
+              <span class="ui-card__title">太空探索合成海报</span>
+              <i class="fa fa-search-plus ui-card__zoom" aria-hidden="true"></i>
+            </div>
+          </article>
+
+          <article class="ui-card" data-tag="品牌符号">
+            <div class="ui-card__media">
+              <img
+                class="ui-card__img"
+                src="assets/media/ui-stamp-logo.jpg"
+                width="1239"
+                height="1500"
+                loading="lazy"
+                decoding="async"
+                alt="十五周年纪念邮票图形标识设计"
+              />
+            </div>
+            <div class="ui-card__caption">
+              <span class="ui-card__title">纪念邮票标识</span>
+              <i class="fa fa-search-plus ui-card__zoom" aria-hidden="true"></i>
+            </div>
+          </article>
+
+          <article class="ui-card" data-tag="展览视觉">
+            <div class="ui-card__media">
+              <img
+                class="ui-card__img"
+                src="assets/media/ui-deji-poster.jpg"
+                width="1350"
+                height="1800"
+                loading="lazy"
+                decoding="async"
+                alt="德基艺术博物馆花卉静物三百年开展倒计时海报"
+              />
+            </div>
+            <div class="ui-card__caption">
+              <span class="ui-card__title">花卉静物展海报</span>
+              <i class="fa fa-search-plus ui-card__zoom" aria-hidden="true"></i>
+            </div>
+          </article>
+
+          <article class="ui-card" data-tag="概念海报">
+            <div class="ui-card__media">
+              <img
+                class="ui-card__img"
+                src="assets/media/ui-awakening-poster.jpg"
+                width="1273"
+                height="1800"
+                loading="lazy"
+                decoding="async"
+                alt="觉醒年代主题概念海报与版式合成"
+              />
+            </div>
+            <div class="ui-card__caption">
+              <span class="ui-card__title">觉醒年代海报</span>
+              <i class="fa fa-search-plus ui-card__zoom" aria-hidden="true"></i>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="ui-works__footer">
+          <div class="ui-works__progress" aria-hidden="true">
+            <span class="ui-works__progress-bar" data-gallery-progress></span>
+          </div>
+          <p class="ui-works__hint">横向滑动浏览 · 点击图片放大</p>
+        </div>
+      </div>
+    </section>
+    <!-- /END UI Works Section -->
+
+    <!-- **** Contact Section **** -->
+    <section id="contact">
+      <div class="container">
+        <h2 class="section-title">
+          <span class="section-kicker">Contact</span>一起做点好产品？
+        </h2>
+        <div class="contact-wrapper load-hidden">
+          <p class="contact-wrapper__text">
+            欢迎从项目出发，聊用户、聊取舍，也聊下一步能一起做什么。
+          </p>
+          <a
+            class="cta-btn cta-btn--resume contact-wrapper__wechat"
+            href="assets/media/wechat-contact.jpg"
+            data-wechat-contact
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="打开 Zora 的微信二维码"
+            title="微信联系：打开二维码"
+          >
+            <i class="fa fa-weixin" aria-hidden="true"></i>
+          </a>
+          <p class="contact-wrapper__hint">
+            点击打开微信二维码 · 在微信内可长按识别
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- /END Contact Section -->
+
+    <!-- **** Footer Section **** -->
+    <footer class="footer navbar-static-bottom">
+      <div class="container">
+        <a
+          rel="noreferrer"
+          href="#top"
+          class="back-to-top"
+          aria-label="返回顶部"
+        >
+          <i class="fa fa-angle-up fa-2x" aria-hidden="true"></i>
+        </a>
+        <div class="social-links">
+          <a
+            href="assets/bonjour.txt"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-bonjour-code="#小程序://Bonjour/9cmOIHhYkqsPNHI"
+            aria-label="复制 Bonjour 小程序口令，在微信中粘贴打开"
+            title="复制 Bonjour 小程序口令，在微信中粘贴打开"
+          >
+            <img
+              class="social-links__icon"
+              src="assets/media/bonjour-logo.png"
+              width="30"
+              height="30"
+              alt=""
+              data-bonjour-icon
+            />
+            <i
+              class="fa fa-check"
+              aria-hidden="true"
+              data-bonjour-copied
+              hidden
+            ></i>
+          </a>
+          <a
+            href="https://xhslink.cn/o/1y6ls6jVE2W"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Zora 的小红书主页"
+            title="小红书"
+          >
+            <img
+              class="social-links__icon"
+              src="assets/media/xiaohongshu-logo.ico"
+              width="30"
+              height="30"
+              alt=""
+            />
+          </a>
+          <a
+            rel="noreferrer"
+            href="https://github.com/jiajia0820"
+            target="_blank"
+            aria-label="Zora 的 GitHub"
+          >
+            <i class="fa fa-github fa-inverse"></i>
+          </a>
+        </div>
+
+        <p class="visually-hidden" role="status" data-contact-status></p>
+
+        <hr />
+
+        <p class="footer__motto" lang="en">You can be anyone you want to be.</p>
+        <p class="footer__text">
+          © 2026 Zora · Template developed by
+          <a rel="noreferrer" href="https://github.com/cobiwave" target="_blank"
+            >Jacobo Martínez</a
+          >
+        </p>
+      </div>
+    </footer>
+    <!-- /END Footer Section -->
+
+    <div
+      class="ui-lightbox"
+      data-gallery-lightbox
+      hidden
+      role="dialog"
+      aria-modal="true"
+      aria-label="视觉作品大图预览"
+    >
+      <button
+        type="button"
+        class="ui-lightbox__nav ui-lightbox__nav--prev"
+        data-lightbox-prev
+        aria-label="查看上一张作品"
+      >
+        <i class="fa fa-angle-left" aria-hidden="true"></i>
+      </button>
+      <div class="ui-lightbox__dialog">
+        <button
+          type="button"
+          class="ui-lightbox__close"
+          data-lightbox-close
+          aria-label="关闭大图预览"
+        >
+          &times;
+        </button>
+        <img class="ui-lightbox__img" data-lightbox-img alt="" />
+        <p class="ui-lightbox__caption" data-lightbox-caption></p>
+      </div>
+      <button
+        type="button"
+        class="ui-lightbox__nav ui-lightbox__nav--next"
+        data-lightbox-next
+        aria-label="查看下一张作品"
+      >
+        <i class="fa fa-angle-right" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <script defer type="module" src="index.js"></script>
+  </body>
+</html>

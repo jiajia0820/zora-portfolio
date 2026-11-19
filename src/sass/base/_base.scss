@@ -1,0 +1,59 @@
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 7rem;
+
+  &.sr .load-hidden {
+    visibility: hidden;
+  }
+}
+
+body {
+  font-family: $font-base;
+  text-align: center;
+  color: $ink;
+  background: $paper;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: $sun-soft;
+  color: $ink;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid $sun;
+  outline-offset: 3px;
+  border-radius: 0.6rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: $light-grey;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: $primary-color;
+}

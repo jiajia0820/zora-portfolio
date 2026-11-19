@@ -1,0 +1,38 @@
+{
+  "name": "zora-portfolio",
+  "version": "1.0.1",
+  "private": "true",
+  "description": "Zora 的 AI 产品经理作品集，基于 Simplefolio 模板。",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel --no-cache",
+    "build": "parcel build --no-cache --public-url ./ && node scripts/preserve-contact-qr.cjs && node scripts/verify-build.cjs",
+    "test": "node --test tests/*.test.cjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jiajia0820/zora-portfolio"
+  },
+  "keywords": [],
+  "author": "Zora",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jiajia0820/zora-portfolio/issues"
+  },
+  "homepage": "https://jiajia0820.github.io/zora-portfolio/",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.8.2",
+    "parcel": "^2.8.2",
+    "prettier": "^2.8.1"
+  },
+  "dependencies": {
+    "@fontsource/sora": "^5.3.0",
+    "@popperjs/core": "^2.11.6",
+    "bootstrap": "^5.2.3",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.6.3",
+    "popper.js": "^1.16.1",
+    "scrollreveal": "^4.0.9",
+    "vanilla-tilt": "^1.8.0"
+  }
+}

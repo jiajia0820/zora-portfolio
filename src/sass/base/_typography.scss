@@ -1,0 +1,92 @@
+h1 {
+  font-weight: 700;
+}
+
+p,
+a {
+  font-family: $font-base;
+  font-size: $default-font-size;
+}
+
+a,
+a:link,
+a:hover,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+
+a:hover {
+  transition: all 0.3s ease-in-out;
+}
+
+.section-title {
+  margin: 0px;
+  margin-bottom: 4.5rem;
+  font-size: $big-font-size;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+
+  @include respond(phone) {
+    font-size: 2.8rem;
+  }
+}
+
+// Small English label with a short bar above each section title.
+.section-kicker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  opacity: 0.85;
+
+  &::before {
+    content: "";
+    width: 2.8rem;
+    height: 0.4rem;
+    border-radius: 999px;
+    background: $sun;
+  }
+}
+
+.section-intro {
+  max-width: 62rem;
+  margin: -2.4rem auto 6rem;
+  font-size: 1.7rem;
+  line-height: 1.8;
+  color: $ink-soft;
+}
+
+.dark-blue-text {
+  color: $ink !important;
+}
+
+// Restrained emphasis: bold ink text with a soft highlighter underline.
+mark.hl {
+  padding: 0 0.1em;
+  font-weight: 700;
+  color: inherit;
+  background: linear-gradient(transparent 62%, rgba(255, 194, 75, 0.45) 62%);
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+.text-color-main {
+  @include supportColorForIE11();
+
+  // Responsive text purple style
+  @include respond(phone) {
+    background-image: none;
+    -webkit-text-fill-color: $secondary-color;
+  }
+
+  &:hover {
+    transform: translateX(2px);
+  }
+}
