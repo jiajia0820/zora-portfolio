@@ -128,7 +128,8 @@ test("loads fonts, icons and reveal library without overseas CDNs", () => {
 });
 
 test("ships a Zora favicon, share card and subpath-safe build", () => {
-  assert.match(html, /property="og:title" content="Zora/);
+  assert.match(html, /<title>AI作品集 \| Zora<\/title>/);
+  assert.match(html, /property="og:title" content="AI作品集 \| Zora"/);
   assert.match(
     html,
     /property="og:image"\s+content="https:\/\/[^"]+\/og-card\.jpg"/
