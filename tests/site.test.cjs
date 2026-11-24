@@ -84,8 +84,14 @@ test("keeps recruiting claims scoped to supplied evidence", () => {
     html,
     /<dt>评测<\/dt>\s*<dd>[\s\S]*?<details class="case-details">[\s\S]*?<\/details>\s*<\/dd>/
   );
-  // Text and visual columns are split half and half.
-  assert.equal((html.match(/class="col-lg-6 col-sm-12"/g) || []).length, 8);
+  // Project text and visual columns are split half and half.
+  const projectsHtml = html
+    .split('<section id="projects">')[1]
+    .split("</section>")[0];
+  assert.equal(
+    (projectsHtml.match(/class="col-lg-6 col-sm-12"/g) || []).length,
+    8
+  );
   assert.doesNotMatch(html, /col-lg-4 col-sm-12|col-lg-8 col-sm-12/);
   assert.doesNotMatch(copyAll, /累计用户|自建评测准确率/);
 
