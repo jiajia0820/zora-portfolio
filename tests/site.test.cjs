@@ -79,7 +79,14 @@ test("keeps recruiting claims scoped to supplied evidence", () => {
   assert.match(copyAll, /小程序已停止服务，以上为上线 6 周历史数据/);
   assert.match(copyAll, /后续未参与调优题目的正确率约为 80%–90%/);
   assert.match(copyAll, /从事件发生到运维人员收到告警/);
-  assert.match(html, /<details class="case-details">/);
+  // The Badcase walkthrough sits inside the "评测" point it illustrates.
+  assert.match(
+    html,
+    /<dt>评测<\/dt>\s*<dd>[\s\S]*?<details class="case-details">[\s\S]*?<\/details>\s*<\/dd>/
+  );
+  // Text and visual columns are split half and half.
+  assert.equal((html.match(/class="col-lg-6 col-sm-12"/g) || []).length, 8);
+  assert.doesNotMatch(html, /col-lg-4 col-sm-12|col-lg-8 col-sm-12/);
   assert.doesNotMatch(copyAll, /累计用户|自建评测准确率/);
 
   // Highlights stay restrained: at most two per project.
@@ -111,8 +118,12 @@ test("hero presents Zora's positioning, scoped stats and motto", () => {
   // Static fallback values must already be the final, true numbers.
   assert.match(hero, /data-count-to="2300">2,300</);
   assert.match(hero, /data-count-to="97\.5"\s+data-decimals="1"\s*>97\.5</);
-  assert.equal((hero.match(/role="tab"/g) || []).length, 2);
-  assert.equal((hero.match(/data-think-panel/g) || []).length, 2);
+  // Right column mirrors the approved HTML: three fanned 智家清单 screens.
+  assert.match(copy, /看我的项目/);
+  assert.doesNotMatch(copy, /看我的产品/);
+  assert.match(hero, /class="hero-product load-hidden"\s+href="#zhijia"/);
+  assert.equal((hero.match(/class="hero-phone hero-phone--/g) || []).length, 3);
+  assert.match(html, /<div class="row" id="zhijia">/);
 });
 
 test("loads fonts, icons and reveal library without overseas CDNs", () => {

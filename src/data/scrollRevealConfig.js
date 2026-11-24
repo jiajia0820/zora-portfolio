@@ -44,7 +44,7 @@ export const targetElements = [
     },
   },
   {
-    element: ".hero-visual",
+    element: ".hero-product",
     animation: {
       delay: 500,
       origin: window.innerWidth > 768 ? "right" : "bottom",

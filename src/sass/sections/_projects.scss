@@ -31,11 +31,13 @@
 
     &__text {
       text-align: left;
+      padding-right: 2.4rem;
 
       @include respond(phone) {
         margin-bottom: 2.5rem !important;
       }
       @include respond(tab-land) {
+        padding-right: 0;
         margin-bottom: 3.2rem;
       }
 
@@ -84,8 +86,8 @@
     }
 
     &__image {
-      width: 90%;
-      margin: 0 auto;
+      width: 100%;
+      margin: 0;
 
       @include respond(tab-land) {
         width: 100%;
@@ -234,7 +236,7 @@
 
   // Expandable real Badcase walkthrough.
   .case-details {
-    margin: 0 0 2.4rem;
+    margin: 1.2rem 0 0.4rem;
     border: 1px solid rgba(27, 34, 64, 0.1);
     border-radius: 1.2rem;
     background: $white-color;
