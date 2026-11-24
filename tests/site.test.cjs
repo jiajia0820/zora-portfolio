@@ -62,21 +62,25 @@ test("keeps recruiting claims scoped to supplied evidence", () => {
     ...html.matchAll(/<p class="project-meta">([\s\S]*?)<\/p>/g),
   ].map((match) => match[1].replace(/<[^>]+>/g, " ").replace(/\s+/g, " "));
   // Order: shipped product, internship, competition demo, personal project.
-  assert.match(metas[0], /3 人团队发起人、产品与 AI 应用负责人/);
-  assert.match(metas[1], /产品实习 · 边缘智能研究院/);
-  assert.match(metas[2], /赛题 Demo · 产品负责人，主导完成产品设计与开发/);
+  assert.match(metas[0], /已上线微信小程序 · 3 人团队 · 产品与 AI 应用开发/);
+  assert.match(metas[1], /驻场产品实习/);
+  assert.match(metas[2], /中国电子杯赛题 Demo · 产品负责人/);
   assert.match(metas[3], /基于开源项目二次迭代/);
-  assert.match(projects[0], /规则定推荐，AI 做解释/);
-  assert.match(projects[0], /上线 6 周累计用户 2,300\+/);
-  assert.match(projects[1], /驻场产品实习生/);
-  assert.match(projects[1], /5 台机器人试点 4 周/);
-  assert.match(projects[1], /后续在 2 个病区常态化运行/);
-  assert.match(
-    projects[2],
-    /在自建的 119 个评分单元评测集（含多轮会话）上，准确率由 82\.4% 提升至 97\.5%/
-  );
-  assert.match(projects[3], /基于开源项目持续迭代/);
+  assert.match(projects[0], /规则生成清单，大模型负责问答与方案解释/);
+  assert.match(projects[0], /队友分别负责前端 UI 与后端数据库/);
+  assert.match(projects[1], /驻场江苏省人民医院/);
+  assert.match(projects[1], /3 类核心告警/);
+  assert.match(projects[2], /约 150 道问题构建含多轮会话的 119 个评分单元/);
   assert.match(projects[3], /90\+ 期播客.*35\+ 位身边朋友/);
+
+  // Numbers carry their definitions, as in the approved copy.
+  const copyAll = html.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ");
+  assert.match(copyAll, /测评完成率＝完成测评\/打开/);
+  assert.match(copyAll, /小程序已停止服务，以上为上线 6 周历史数据/);
+  assert.match(copyAll, /后续未参与调优题目的正确率约为 80%–90%/);
+  assert.match(copyAll, /从事件发生到运维人员收到告警/);
+  assert.match(html, /<details class="case-details">/);
+  assert.doesNotMatch(copyAll, /累计用户|自建评测准确率/);
 
   // Highlights stay restrained: at most two per project.
   const rows = html.split('class="project-wrapper__text-title">').slice(1);
@@ -93,8 +97,8 @@ test("hero presents Zora's positioning, scoped stats and motto", () => {
   assert.doesNotMatch(hero, /hero-badge/);
   assert.match(copy, /You can be anyone you want to be\./);
   assert.equal((hero.match(/class="hero-stat"/g) || []).length, 4);
-  assert.match(copy, /上线 6 周累计用户/);
-  assert.match(copy, /自建评测准确率/);
+  assert.match(copy, /上线 6 周累计打开人数/);
+  assert.match(copy, /原调优集准确率/);
   assert.match(copy, /南京邮电大学 · 电子信息硕士 · 2028 届/);
   assert.match(copy, /荣耀 解决方案实习/);
   assert.doesNotMatch(copy, /医院驻场产品实习|驻场江苏省人民医院产品实习/);

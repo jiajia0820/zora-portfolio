@@ -219,4 +219,85 @@
       white-space: nowrap;
     }
   }
+
+  // Data definitions stay visible but quiet, under the details.
+  .project-note {
+    margin: -0.8rem 0 2rem;
+    padding: 1rem 1.4rem;
+    border-left: 3px solid $sun;
+    border-radius: 0 0.8rem 0.8rem 0;
+    font-size: 1.3rem;
+    line-height: 1.7;
+    color: $ink-soft;
+    background: rgba(255, 194, 75, 0.1);
+  }
+
+  // Expandable real Badcase walkthrough.
+  .case-details {
+    margin: 0 0 2.4rem;
+    border: 1px solid rgba(27, 34, 64, 0.1);
+    border-radius: 1.2rem;
+    background: $white-color;
+    overflow: hidden;
+
+    summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 4.4rem;
+      padding: 0 1.6rem;
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: $ink;
+      cursor: pointer;
+      list-style: none;
+
+      &::-webkit-details-marker {
+        display: none;
+      }
+
+      &::after {
+        content: "+";
+        font-size: 2rem;
+        font-weight: 400;
+        color: darken($primary-color, 6%);
+        transition: transform 0.25s ease;
+      }
+
+      &:hover {
+        background: $teal-soft;
+      }
+    }
+
+    &[open] summary::after {
+      transform: rotate(45deg);
+    }
+
+    .case-body {
+      padding: 0.4rem 1.6rem 1.6rem;
+      border-top: 1px dashed rgba(27, 34, 64, 0.12);
+
+      h4 {
+        margin: 1.4rem 0 0.4rem;
+        font-size: 1.25rem;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        color: darken($primary-color, 8%);
+      }
+
+      p {
+        margin: 0;
+        font-size: 1.4rem;
+        line-height: 1.75;
+        color: $ink-soft;
+      }
+
+      .case-result {
+        padding: 0.8rem 1.2rem;
+        border-radius: 0.8rem;
+        color: $ink;
+        background: $teal-soft;
+      }
+    }
+  }
 }

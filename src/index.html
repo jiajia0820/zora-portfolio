@@ -33,7 +33,7 @@
     <meta property="og:title" content="AI作品集 | Zora" />
     <meta
       property="og:description"
-      content="把问题拆透，用 AI 把好产品做出来。2,300+ 用户的小程序、97.5% 评测准确率的问数 Agent。"
+      content="把问题拆透，用 AI 把好产品做出来。已上线的智家清单、驻场医院的病区巡检、可回查来源的问数 Agent。"
     />
     <meta
       property="og:url"
@@ -205,7 +205,7 @@
                   <li class="think-line think-line--result" style="--i: 4">
                     <span class="think-line__tag">结果</span>
                     <span class="think-line__text"
-                      >上线 6 周，累计用户 <strong>2,300+</strong></span
+                      >上线 6 周，累计打开 <strong>2,300+</strong> 人</span
                     >
                   </li>
                 </ol>
@@ -242,7 +242,7 @@
                   <li class="think-line think-line--result" style="--i: 4">
                     <span class="think-line__tag">结果</span>
                     <span class="think-line__text"
-                      >自建评测准确率 82.4% → <strong>97.5%</strong></span
+                      >调优集准确率 82.4% → <strong>97.5%</strong></span
                     >
                   </li>
                 </ol>
@@ -263,7 +263,7 @@
               ><span data-count-to="2300">2,300</span
               ><span class="hero-stat__unit">+</span></span
             >
-            <span class="hero-stat__label">智家清单上线 6 周累计用户</span>
+            <span class="hero-stat__label">智家清单上线 6 周累计打开人数</span>
           </li>
           <li class="hero-stat">
             <span class="hero-stat__value"
@@ -274,7 +274,7 @@
                 >97.5</span
               ><span class="hero-stat__unit">%</span></span
             >
-            <span class="hero-stat__label">问数 Agent 自建评测准确率</span>
+            <span class="hero-stat__label">问数 Agent 原调优集准确率</span>
           </li>
           <li class="hero-stat">
             <span class="hero-stat__value"
@@ -390,11 +390,11 @@
       <div class="container">
         <div class="project-wrapper">
           <h2 class="section-title dark-blue-text">
-            <span class="section-kicker">Work</span>我的产品实践
+            <span class="section-kicker">Work</span>产品实践
           </h2>
           <p class="section-intro">
-            每个项目都从一个真实问题出发：先拆清用户与场景，再决定 AI
-            负责什么，最后用数据验证。
+            已上线产品、驻场实习、赛题 Demo
+            与开源二次迭代分别标注；演示和源码均可直接查看。
           </p>
 
           <!-- Unavailable project links stay unset until real assets are supplied. -->
@@ -404,44 +404,51 @@
               <div class="project-wrapper__text load-hidden">
                 <p class="project-meta">
                   <span class="project-meta__index">01</span>已上线微信小程序 ·
-                  3 人团队发起人、产品与 AI 应用负责人
+                  3 人团队 · 产品与 AI 应用开发
                 </p>
                 <h3 class="project-wrapper__text-title">智家清单</h3>
                 <ul class="project-metrics" aria-label="智家清单关键数据">
-                  <li><strong>2,300+</strong>上线 6 周累计用户</li>
+                  <li><strong>2,300+</strong>上线 6 周累计打开人数</li>
                   <li><strong>68%</strong>测评完成率</li>
                   <li><strong>21%</strong>方案收藏率</li>
                 </ul>
                 <div class="project-body">
                   <p class="project-lead">
-                    为首次装修的用户做智能家居选购，让推荐既懂需求，也守住预算。
+                    面向首次装修用户的智能家居选购工具，2026.07–2026.08。
                   </p>
                   <dl class="project-points">
                     <div>
-                      <dt>洞察</dt>
+                      <dt>调研</dt>
                       <dd>
-                        访谈 12
-                        位首次装修用户，发现模型直接推荐容易超预算，也难兼容已有设备。
+                        访谈 12 位首次装修用户，将选购经验整理为 6 题测评、8
+                        类场景包与 3
+                        档方案，支持预算降档、已有设备扣减和分阶段购买。
                       </dd>
                     </div>
                     <div>
-                      <dt>取舍</dt>
+                      <dt>分工</dt>
                       <dd>
-                        确立“<mark class="hl">规则定推荐，AI 做解释</mark
-                        >”：选购经验拆成 6 题测评、8 类场景包与 3
-                        档方案；模型或云端异常时回退规则方案，主流程不中断。
+                        <mark class="hl"
+                          >规则生成清单，大模型负责问答与方案解释</mark
+                        >，以结构化 JSON
+                        对接场景包；模型或云端异常时回退规则方案。
                       </dd>
                     </div>
                     <div>
-                      <dt>结果</dt>
+                      <dt>交付</dt>
                       <dd>
-                        1 个月完成需求到上线，上线 6 周累计用户
-                        <mark class="hl">2,300+</mark>。入围 Trae AI
-                        创造力大赛年度 350 强（约 1.4 万份作品，前 2.5%）。
+                        本人负责产品与 AI 应用开发，队友分别负责前端 UI
+                        与后端数据库；<mark class="hl"
+                          >1 个月完成需求到上线</mark
+                        >，入围 Trae AI 创造力大赛年度 350 强。
                       </dd>
                     </div>
                   </dl>
                 </div>
+                <p class="project-note">
+                  测评完成率＝完成测评/打开，方案收藏率＝收藏/打开。用户主要来自比赛推广、朋友圈、社群和自媒体；小程序已停止服务，以上为上线
+                  6 周历史数据。
+                </p>
                 <a
                   class="cta-btn cta-btn--hero"
                   href="assets/media/zhijia-demo.mp4"
@@ -523,43 +530,47 @@
             <div class="col-lg-4 col-sm-12">
               <div class="project-wrapper__text load-hidden">
                 <p class="project-meta">
-                  <span class="project-meta__index">02</span>产品实习 ·
-                  边缘智能研究院（驻场江苏省人民医院）
+                  <span class="project-meta__index">02</span>驻场产品实习 ·
+                  智慧医疗 · 云边端协同
                 </p>
                 <h3 class="project-wrapper__text-title">智慧病区巡检</h3>
                 <ul class="project-metrics" aria-label="智慧病区巡检关键数据">
-                  <li><strong>7→2.1 分钟</strong>告警平均响应</li>
-                  <li><strong>20+→3</strong>诉求收敛为核心告警</li>
+                  <li><strong>7→2.1 分钟</strong>平均告警响应</li>
+                  <li><strong>5 台 / 4 周</strong>机器人试点</li>
                   <li><strong>2 个</strong>病区常态化运行</li>
                 </ul>
                 <div class="project-body">
-                  <p class="project-lead">病区里的需求很多，先解决哪几个？</p>
+                  <p class="project-lead">
+                    边缘智能研究院 · 驻场江苏省人民医院，2025.10–2026.03。
+                  </p>
                   <dl class="project-points">
                     <div>
-                      <dt>洞察</dt>
+                      <dt>调研</dt>
                       <dd>
-                        作为驻场产品实习生，跟岗访谈 6 个病区的 30+ 名医护，将
-                        <mark class="hl">20+ 项诉求收敛为 3 类核心告警</mark
-                        >：跌倒、异常滞留、通道阻塞。
+                        跟岗访谈 6 个病区的 30+ 名医护，将 20+
+                        项巡检诉求整理为跌倒、异常滞留、通道阻塞
+                        <mark class="hl">3 类核心告警</mark>。
                       </dd>
                     </div>
                     <div>
                       <dt>推进</dt>
                       <dd>
                         负责 PRD
-                        与原型，协同算法、硬件团队推进云边端方案及验收。
+                        与原型，与算法、硬件团队设计机器人、病区边缘服务器和云端的协同流程，并推进试点验收。
                       </dd>
                     </div>
                     <div>
-                      <dt>结果</dt>
+                      <dt>调度</dt>
                       <dd>
-                        5 台机器人试点 4 周，告警平均响应由
-                        <mark class="hl">7 分钟降至 2.1 分钟</mark>，后续在 2
-                        个病区常态化运行。
+                        另与算法同学共同设计强化学习多机调度策略，仿真中时延与能耗成本降低约
+                        20%，相关发明专利已受理。
                       </dd>
                     </div>
                   </dl>
                 </div>
+                <p class="project-note">
+                  告警响应时间指从事件发生到运维人员收到告警；常态化运行后的主要使用者为运维人员。
+                </p>
               </div>
             </div>
             <div class="col-lg-8 col-sm-12">
@@ -607,46 +618,83 @@
               <div class="project-wrapper__text load-hidden">
                 <p class="project-meta">
                   <span class="project-meta__index">03</span>中国电子杯赛题 Demo
-                  · 产品负责人，主导完成产品设计与开发
+                  · 产品负责人 · 设计与开发
                 </p>
                 <h3 class="project-wrapper__text-title">经营分析问数 Agent</h3>
-                <ul class="project-metrics" aria-label="问数 Agent 关键数据">
-                  <li><strong>82.4%→97.5%</strong>自建评测准确率</li>
-                  <li><strong>119</strong>个评分单元</li>
-                  <li><strong>6 秒内</strong>单轮平均响应</li>
+                <ul
+                  class="project-metrics"
+                  aria-label="经营分析问数 Agent关键数据"
+                >
+                  <li><strong>82.4%→97.5%</strong>原调优集准确率</li>
+                  <li><strong>约 80%–90%</strong>后续未调优题正确率</li>
                 </ul>
                 <div class="project-body">
                   <p class="project-lead">
-                    业务问数的难点，在于数字答出来后能否被信任。
+                    跨业务表与经营文档的问答工具，2026.09–2026.10。
                   </p>
                   <dl class="project-points">
                     <div>
-                      <dt>洞察</dt>
+                      <dt>方案</dt>
                       <dd>
-                        经营数据散落在 11 张业务表与 12 份文档，口径不一。访谈 5
-                        位财务分析用户后，把目标定为“<mark class="hl"
-                          >每个数字都能回查来源</mark
-                        >”。
+                        访谈 5
+                        位财务分析用户，针对数据口径不一、结论难复查，采用 SQL
+                        与文档检索并行、LangGraph 编排，覆盖 11 张业务表与 12
+                        份文档。
                       </dd>
                     </div>
                     <div>
-                      <dt>取舍</dt>
+                      <dt>可信</dt>
                       <dd>
-                        对比 RAG、NL2SQL 与混合方案，用 LangGraph 编排 SQL
-                        与文档检索；先澄清口径，再逐项绑定结果、原文和公式。
+                        建立指标目录统一指标、期间和单位；条件缺失时先澄清再查询，<mark
+                          class="hl"
+                          >答案逐项绑定 SQL 结果、原文与公式</mark
+                        >。
                       </dd>
                     </div>
                     <div>
-                      <dt>结果</dt>
+                      <dt>评测</dt>
                       <dd>
-                        按 5 类 Badcase 复盘迭代，在自建的 119
-                        个评分单元评测集（含多轮会话）上，准确率由
-                        <mark class="hl">82.4% 提升至 97.5%</mark
-                        >，单轮平均响应控制在 6 秒内。
+                        以约 150 道问题构建含多轮会话的 119
+                        个评分单元，规则校验并结合人工核验；按口径、字段映射、多轮指代等
+                        5 类问题整理 Badcase 并迭代。
                       </dd>
                     </div>
                   </dl>
                 </div>
+                <p class="project-note">
+                  项目性质为赛题 Demo；97.5%
+                  来自同一套反复调优题目，后续未参与调优题目的正确率约为
+                  80%–90%，均不表述为真实业务上线指标。
+                </p>
+                <details class="case-details">
+                  <summary>展开一次真实 Badcase 迭代</summary>
+                  <div class="case-body">
+                    <h4>用户原问</h4>
+                    <p>
+                      “2025 年第三季度 Rock、Metal、Latin 和全音频目标是多少？”
+                    </p>
+                    <h4>原回答的问题</h4>
+                    <p>
+                      系统找到了正确的 D06
+                      文档，也答对了全音频目标，但先贴了二季度历史数据，又把表格抄成难以阅读的文本，没有区分月度分解与季度目标。用户问四组，只有一组能直接读懂。
+                    </p>
+                    <h4>定位到的根因</h4>
+                    <p>
+                      模型引用多带了一个文档编号
+                      doc_id，旧校验器因此把引用判为无效，丢弃整份回答，用户最终只看到备用的纯文本摘录。
+                    </p>
+                    <h4>实际修改</h4>
+                    <p>
+                      允许引用携带额外字段，统一处理表格换行，并逐条核验结论：有证据的结论保留，没有依据的数字仍不能通过。
+                    </p>
+                    <h4>复测结果</h4>
+                    <p class="case-result">
+                      回答第一句完整给出 Rock 50.00 美元/50 件、Metal 24.00
+                      美元/25 件、Latin 18.00 美元/18 件、全部音频 120.00
+                      美元/125 件；该题由失败变为通过。
+                    </p>
+                  </div>
+                </details>
                 <a
                   class="cta-btn cta-btn--hero"
                   href="assets/media/business-agent-demo.mp4"
@@ -712,37 +760,34 @@
                   基于开源项目二次迭代
                 </p>
                 <h3 class="project-wrapper__text-title">声笺</h3>
-                <ul class="project-metrics" aria-label="声笺使用数据">
+                <ul class="project-metrics" aria-label="声笺关键数据">
                   <li><strong>90+ 期</strong>播客已整理</li>
                   <li><strong>35+</strong>位朋友在用</li>
                 </ul>
                 <div class="project-body">
                   <p class="project-lead">
-                    听过的好内容，怎样才能留下来、用起来？
+                    将小宇宙官方文稿整理为 Markdown 私有知识库。
                   </p>
                   <dl class="project-points">
                     <div>
-                      <dt>定位</dt>
+                      <dt>迭代</dt>
                       <dd>
-                        我基于开源项目持续迭代声笺，将小宇宙官方文稿整理成
-                        Markdown 私有知识库，已整理 90+ 期播客，并推荐给 35+
-                        位身边朋友使用。
-                      </dd>
-                    </div>
-                    <div>
-                      <dt>取舍</dt>
-                      <dd>
-                        长内容要读得轻松，也要问得有据。补齐自定义 AI
+                        在开源项目基础上补齐自定义 AI
                         提供商双协议接入、保留原意的 AI 降噪整理与本地声纹分段。
                       </dd>
                     </div>
                     <div>
                       <dt>体验</dt>
                       <dd>
-                        划词追问关联原文时间戳，长文整理保留证据，让用户能<mark
-                          class="hl"
-                          >从总结回到原文</mark
-                        >，继续自己的思考。
+                        支持划词追问并关联原文时间戳，<mark class="hl"
+                          >让总结可以回到原文核对</mark
+                        >。
+                      </dd>
+                    </div>
+                    <div>
+                      <dt>使用</dt>
+                      <dd>
+                        已持续整理 90+ 期播客，并推荐给 35+ 位身边朋友使用。
                       </dd>
                     </div>
                   </dl>
@@ -752,7 +797,7 @@
                   href="https://github.com/jiajia0820/shengjian-xiaoyuzhou"
                   target="_blank"
                   rel="noopener noreferrer"
-                  >查看源码</a
+                  >查看源码与二次开发内容</a
                 >
               </div>
             </div>
