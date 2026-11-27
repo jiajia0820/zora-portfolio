@@ -57,7 +57,9 @@ assert.doesNotMatch(html, /(?:src|href)="[^"]*\b(?:profile|project)\.jpg"/i);
 const videoLinks = [...html.matchAll(/<a\b[^>]*\bhref="([^"]+\.mp4)"/gi)].map(
   (match) => match[1]
 );
-assert.equal(videoLinks.length, 4);
+// 智家清单: button + screenshot; 问数 Agent: button only (screenshot opens the live demo).
+assert.equal(videoLinks.length, 3);
+assert.match(html, /href="?https:\/\/demo\.zorarise\.ccwu\.cc"?/);
 const videos = [...new Set(videoLinks)];
 assert.equal(videos.length, 2);
 for (const [index, name] of ["zhijia", "business-agent"].entries()) {

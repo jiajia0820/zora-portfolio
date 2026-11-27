@@ -285,9 +285,10 @@ test("leaves no disabled placeholder buttons in the page", () => {
 
 test("connects projects to their respective demo and source links", () => {
   const projects = html.split('class="project-wrapper__text-title">').slice(1);
-  for (const [index, name, repository] of [
-    [0, "zhijia", "zhijia-list"],
-    [2, "business-agent", "chinook-business-agent"],
+  // [project index, video name, repo, video link count, total link count]
+  for (const [index, name, repository, videoCount, linkCount] of [
+    [0, "zhijia", "zhijia-list", 2, 3],
+    [2, "business-agent", "chinook-business-agent", 1, 4],
   ]) {
     const project = projects[index];
     assert.equal(
@@ -296,7 +297,7 @@ test("connects projects to their respective demo and source links", () => {
           new RegExp(`href="assets/media/${name}-demo\\.mp4"`, "g")
         ) || []
       ).length,
-      2
+      videoCount
     );
     assert.ok(
       project.includes(`href="https://github.com/jiajia0820/${repository}"`)
@@ -304,11 +305,22 @@ test("connects projects to their respective demo and source links", () => {
     const links = [...project.matchAll(/<a\b[^>]*\bhref="([^"]+)"[^>]*>/g)].map(
       (match) => match[0]
     );
-    assert.equal(links.length, 3);
+    assert.equal(links.length, linkCount);
     assert.ok(links.every((link) => /\btarget="_blank"/.test(link)));
     assert.ok(links.every((link) => /\brel="noopener noreferrer"/.test(link)));
     assert.ok(links.every((link) => !/aria-disabled|tabindex="-1"/.test(link)));
   }
+  // The Agent's live demo is the primary action and its screenshot link.
+  const agent = projects[2].split("<!-- /END Project -->")[0];
+  assert.equal(
+    (agent.match(/href="https:\/\/demo\.zorarise\.ccwu\.cc"/g) || []).length,
+    2
+  );
+  assert.match(
+    agent,
+    /class="cta-btn cta-btn--hero"\s+href="https:\/\/demo\.zorarise\.ccwu\.cc"/
+  );
+  assert.match(agent, />在线体验/);
   const shengjianProject = projects[3].split("<!-- /END Project -->")[0];
   assert.match(shengjianProject, /声笺/);
   assert.equal(
